@@ -13,7 +13,7 @@ const PORT = 3003;
 const orders = [];
 
 // Enable static file serving
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Allow the app to parse form data with middleware
 app.use(express.urlencoded({ extended: true }));
@@ -44,14 +44,12 @@ app.post('/submit-order', (req, res) => {
     const order = req.body;
     order['timestamp'] = new Date();
 
-    console.log(order);
-
-    orders.push(order);
-
-    console.log(orders);
-
     // Display confirmation page
     res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+});
+
+app.get('/admin', (req, res) => {
+    res.send(orders);
 });
 
 // Start the server on the designated port

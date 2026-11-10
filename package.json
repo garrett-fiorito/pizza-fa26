@@ -19,9 +19,13 @@
   },
   "homepage": "https://github.com/tostrander/pizza-fa26#readme",
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^18.0.10",
     "express": "^5.2.1",
     "mysql2": "^3.24.6"
+=======
+    "express": "^5.3.0"
+>>>>>>> 35163ad3274f1b4fb20c5a0f01e336720bc8ef06
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
